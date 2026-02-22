@@ -1091,13 +1091,6 @@
         const feature = featureData[slug];
         
         if (feature) {
-          // Update page URL without refreshing page
-          const newUrl = `/en/${slug}`;
-          history.pushState({ slug }, feature.title, newUrl);
-          
-          // Update page title and description
-          updatePageInfo(feature);
-          
           // Highlight corresponding download button
           document.querySelectorAll('.download-buttons .btn').forEach(btn => {
             btn.classList.remove('btn-blue');

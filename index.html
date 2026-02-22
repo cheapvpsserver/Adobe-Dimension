@@ -1094,13 +1094,6 @@
         const feature = featureData[slug];
         
         if (feature) {
-          // 更新页面URL但不刷新页面
-          const newUrl = `/${slug}`;
-          history.pushState({ slug }, feature.title, newUrl);
-          
-          // 更新页面标题和描述
-          updatePageInfo(feature);
-          
           // 高亮对应的下载按钮
           document.querySelectorAll('.download-buttons .btn').forEach(btn => {
             btn.classList.remove('btn-blue');
